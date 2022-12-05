@@ -1,4 +1,12 @@
+<div align="center">
+
+<img src="img/background.png" alt="logo" height="auto" />
+
+</div>
+
 ### Hi there 👋
+
+
 
 <!--
 **venyxD/venyxD** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
