@@ -15,7 +15,7 @@
 #!/usr/bin/env python3
 
 
-class SoftwareEngineer(Person):
+class Developer(Person):
 
     def __init__(self):
         self.name = 'Andrey'
@@ -26,12 +26,12 @@ class SoftwareEngineer(Person):
 
     def introduce(self) -> str:
         intro = f"Hello world! I'm {self.name}. \n"
-        intro += f"A passionate self-taught {self.skills[0]} developer with expertise in {', '.join(self.skills)}. \n"
-        intro += f"Using {', '.join(self.skills)}."
+        intro += f"A passionate {self.skills[0]} developer with expertise in {', '.join(self.skills)}. \n"
+        intro += f"Using: {', '.join(self.tools)}."
         return intro
 
 
-me = SoftwareEngineer()
+me = Developer()
 print(me.introduce())
 ```
 
