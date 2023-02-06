@@ -12,11 +12,17 @@
 </div>
 
 ```python
-class Developer:
-    def __init__(self, name: str, skills: list, tools: list):
-        self.name = name
-        self.skills = skills
-        self.tools = tools
+#!/usr/bin/env python3
+
+
+class SoftwareEngineer(Person):
+
+    def __init__(self):
+        self.name = 'Andrey'
+        self.role = 'Software Engineer'
+        self.languages = ['ru-RU', 'en-US', 'de-DE']
+        self.skills = ['Python', 'Django', 'Flask', 'SQL', 'HTML/CSS']
+        self.tools = ['Git', 'PostgreSQL', 'Redis', 'Docker', 'Pytest', 'Bootstrap']
 
     def introduce(self) -> str:
         intro = f"Hello world! I'm {self.name}. \n"
@@ -25,17 +31,12 @@ class Developer:
         return intro
 
 
-name = 'Andrey'
-skills = ['Python', 'Django', 'Flask', 'SQL', 'HTML/CSS']
-tools = ['Git', 'PostgreSQL', 'Redis', 'Docker', 'Pytest', 'Bootstrap']
-
-me = Developer(name, skills, tools)
-
+me = SoftwareEngineer()
 print(me.introduce())
 ```
 
 <!-- https://github.com/devicons/devicon -->
-<div align="center">
+<!-- <div align="center">
     <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/python/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
     <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/django/django-plain.svg" title="Django" alt="Django" width="40" height="40"/>&nbsp;
     <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/flask/flask-original.svg" title="Flask" alt="Flask" width="40" height="40"/>&nbsp;
@@ -46,4 +47,4 @@ print(me.introduce())
     <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/pytest/pytest-original.svg" title="Pytest" alt="Pytest" width="40" height="40"/>&nbsp;
     <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/git/git-original.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp;
     <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original.svg" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;
-</div>
+</div> -->
