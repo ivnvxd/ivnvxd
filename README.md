@@ -3,12 +3,14 @@
 
 
 class Person:
+    
     def __init__(self):
         self.name = 'Andrey'
         self.languages = ['ru-RU', 'en-US', 'de-DE']
 
 
 class SoftwareEngineer(Person):
+    
     def __init__(self):
         super().__init__()
         self.role = 'Python developer'
@@ -25,4 +27,6 @@ class SoftwareEngineer(Person):
 
 me = SoftwareEngineer()
 me.introduce()
+
+# I love to connect with different people, so feel free to reach out to me!
 ```
