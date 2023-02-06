@@ -15,19 +15,25 @@
 #!/usr/bin/env python3
 
 
-class Developer(Person):
+class Person:
 
     def __init__(self):
         self.name = 'Andrey'
-        self.role = 'Software Engineer'
         self.languages = ['ru-RU', 'en-US', 'de-DE']
+
+
+class Developer(Person):
+
+    def __init__(self):
+        self.role = 'Software Engineer'
         self.skills = ['Python', 'Django', 'Flask', 'SQL', 'HTML/CSS']
         self.tools = ['Git', 'PostgreSQL', 'Redis', 'Docker', 'Pytest', 'Bootstrap']
 
-    def introduce(self) -> str:
+        super().__init__()
+
+    def introduce(self):
         intro = f"Hello world! I'm {self.name}. \n"
-        intro += f"A passionate {self.skills[0]} developer with expertise in {', '.join(self.skills)}. \n"
-        intro += f"Using: {', '.join(self.tools)}."
+        intro += f"A passionate {self.skills[0]} developer with product management & entrepreneurship background."
         print(intro)
 
 
