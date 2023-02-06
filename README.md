@@ -28,11 +28,11 @@ class Developer(Person):
         intro = f"Hello world! I'm {self.name}. \n"
         intro += f"A passionate {self.skills[0]} developer with expertise in {', '.join(self.skills)}. \n"
         intro += f"Using: {', '.join(self.tools)}."
-        return intro
+        print(intro)
 
 
 me = Developer()
-print(me.introduce())
+me.introduce()
 ```
 
 <!-- https://github.com/devicons/devicon -->
