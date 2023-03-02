@@ -16,7 +16,7 @@ class SoftwareEngineer(Person):
         self.role = 'Python developer'
         self.skills = {
             'code': ['Python', 'SQL', 'HTML', 'CSS'],
-            'tools': ['Django', 'Flask', 'PostgreSQL', 'Redis', 'NumPy', 'Pandas', 'Docker', 'Git' 'Pytest', 'Bootstrap']
+            'tools': ['Django', 'Flask', 'PostgreSQL', 'Redis', 'NumPy', 'Pandas', 'Docker', 'Git']
         }
 
     def introduce(self):
