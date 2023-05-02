@@ -10,7 +10,7 @@ class SoftwareEngineer(Person):
 
     def __init__(self):
         super().__init__()
-        self.role = 'Python developer'
+        self.role = 'Python Developer'
         self.skills = {
             'code': ['Python', 'Go', 'SQL', 'HTML', 'CSS'],
             'tools': ['Django', 'Flask', 'PostgreSQL', 'Redis', 'NumPy', 'Pandas', 'Docker', 'Git']
@@ -18,8 +18,7 @@ class SoftwareEngineer(Person):
 
     def introduce(self):
         intro = f"Hello world! :wave: My name is **{self.name}**, "
-        intro += f"and I'm a **{self.role}** with a background in product management and entrepreneurship.\n"
-        intro += "And I love to connect with different people. Feel free to reach out to me!\n"
+        intro += f"and I'm a **{self.role}** with Product Management and Entrepreneurship background.\n"
         return intro
 
     def display_skills(self):
