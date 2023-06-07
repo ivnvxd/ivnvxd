@@ -12,8 +12,8 @@ class SoftwareEngineer(Person):
         super().__init__()
         self.role = 'Python Developer'
         self.skills = {
-            'code': ['Python', 'Go', 'SQL', 'HTML', 'CSS'],
-            'tools': ['Django', 'Flask', 'PostgreSQL', 'Redis', 'NumPy', 'Pandas', 'Docker', 'Git']
+            'code': ['Python', 'Go', 'HTML', 'CSS'],
+            'tools': ['Django', 'Flask', 'SQL', 'NoSQL', 'NumPy', 'Docker']
         }
 
     def introduce(self):
