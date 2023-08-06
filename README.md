@@ -1,39 +1,22 @@
 ```python
-class Person:
+class Dev:
     def __init__(self):
         self.name = "Andrey"
         self.languages = ["ru-RU", "en-US", "de-DE"]
-
-
-class SoftwareEngineer(Person):
-    def __init__(self):
-        super().__init__()
-        self.role = "Software Developer"
-        self.skills = {
-            "code": ["Python", "Go", "HTML", "CSS"],
-            "tools": ["Django", "Flask", "SQL", "NoSQL", "NumPy", "Docker"],
-        }
+        self.role = "Software Engineer"
+        self.skills = ["Python", "Go", "Django", "Flask", "SQL", "JS", "HTML", "CSS"]
 
     def generate_readme(self):
         intro = (
-            f"Hello world! :wave: My name is **{self.name}**, "
-            + f"and I'm a **{self.role}** "
-            + "with Product Management and Entrepreneurship background."
+            f"# Hello world! :wave: My name is {self.name}\n"
+            + f"I'm a {self.role} with Product Management and Entrepreneurship background."
         )
+        skills = "## :rocket: My Tech Stack:\n```\n" + f"{', '.join(self.skills)}\n```"
 
-        skills = (
-            "## :rocket: Tech Skills:\n\n```python\n"
-            + '{\n    "code": ' + ", ".join(self.skills["code"])
-            + ',\n    "tools": ' + ", ".join(self.skills["tools"])
-            + "\n}\n```"
-        )
-
-        return (
-            f"{intro}\n\n{skills}\n\n"
-            + "Let's connect and build amazing things together! :wink:"
-        )
+        return f"{intro}\n{skills}"
 
 
-me = SoftwareEngineer()
+me = Dev()
 print(me.generate_readme())
+print("Let's connect and build amazing things together! :wink:")
 ```
