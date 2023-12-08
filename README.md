@@ -1,25 +1,26 @@
 ```elixir
 defmodule Dev do
   defstruct name: "Andrey",
-            languages: ["ru-RU", "en-US", "de-DE"],
             role: "Software Engineer",
-            experience: ["Product Management", "Finance", "Entrepreneurship"],
+            speak: %{"ru-RU" => "Russian", "en-US" => "English", "de-DE" => "German"},
+            exp: ["Product Management", "Finance", "Entrepreneurship"],
             skills: ["Python", "Go", "Elixir", "Django", "Flask"]
 
-  def generate_readme(%Dev{name: name, role: role, experience: experience, skills: skills}) do
-    experiences_text =
-      experience |> Enum.reverse() |> format_experience_list()
-
-    skills_text = Enum.join(skills, ", ")
-
-    "# Hello world! :wave: My name is #{name}\n" <>
-      "I'm a #{role} with #{experiences_text} background.\n\n" <>
-      "## :rocket: My Tech Stack:\n```\n#{skills_text}\n```\n" <>
+  def generate_readme(%Dev{name: name, role: role, exp: exp, speak: speak, skills: skills}) do
+    [
+      "# Hello world! :wave: My name is #{name}.",
+      "I'm a #{role} with #{format_list(exp)} background.",
+      "I speak #{format_list(Map.values(speak))}.\n",
+      "## :rocket: My Tech Stack:\n```\n#{Enum.join(skills, ", ")}\n```",
       "Let's connect and build amazing things together! :wink:"
+    ]
+    |> Enum.join("\n")
   end
 
-  defp format_experience_list([last | rest]) do
-    Enum.join(Enum.reverse(rest), ", ") <> ", and " <> last
+  defp format_list([single]), do: single
+  defp format_list(list) do
+    Enum.split(list, -1)
+    |> (fn {rest, [last]} -> Enum.join(rest, ", ") <> ", and " <> last end).()
   end
 
   def run do
@@ -27,4 +28,6 @@ defmodule Dev do
     IO.puts(generate_readme(me))
   end
 end
+
+Dev.run()
 ```
